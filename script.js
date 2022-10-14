@@ -8,7 +8,6 @@ let button = document.getElementById('btn');
 button.addEventListener('click', () => {
     if (input.value !== ""){
         let found = false;
-        let count = 1;
         listItems.forEach(listitem => {
             if (listitem.innerText === input.value){
                 found = true;
