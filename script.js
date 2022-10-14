@@ -11,12 +11,12 @@ button.addEventListener('click', () => {
         listItems.forEach(listitem => {
             if (listitem.innerText === input.value){
                 found = true;
-                // listitem.innerText = `${listitem.innerText} x2`
+                listitem.innerText = `${listitem.innerText} x2`
                 input.value = '';
             }
-        })
+        });
         if (found){
-
+            // alert('Item already exists')
         }
         else{
             let newListItem = document.createElement('li');
