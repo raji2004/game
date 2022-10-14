@@ -7,28 +7,30 @@ let listItems = document.querySelectorAll('li');
 let button = document.getElementById('btn');
 button.addEventListener('click', () => {
     if (input.value !== ""){
-        let newListItem = document.createElement('li');
-        let listContent = document.createTextNode(input.value);
-        body.append(ul);
-        ul.append(newListItem);
-        newListItem.append(listContent);
-        input.value = '';
+        let found = false;
+        let count = 1;
+        listItems.forEach(listitem => {
+            if (listitem.innerText === input.value){
+                found = true;
+                // listitem.innerText = `${listitem.innerText} x2`
+                input.value = '';
+            }
+        })
+        if (found){
+
+        }
+        else{
+            let newListItem = document.createElement('li');
+            let listContent = document.createTextNode(input.value);
+
+            // body.append(ul);
+            ul.append(newListItem);
+            newListItem.append(listContent);
+            input.value = '';
+        } 
     }
 });
-// console.log(listItems[0]);
-// console.log(listItems);
-// for (let i=0; i<listItems.length; i++ ){
-//     if (input.value === listItems[0]){
-//         console.log(listItems[0]);
-//     }
-// }
-// console.log(listItems[2]);
 
-listItems.forEach(i => {
-    if (input.value === i){
-        console.log('It worked');
-    }
-})
 
 
 
