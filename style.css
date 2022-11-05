@@ -8,3 +8,17 @@
     justify-content: space-between;
     margin-bottom: 1rem;
 }
+
+.dirt{
+    background-color: brown;
+    width: 100px;
+    height: 100px;
+}
+.grass{
+    background-color: green;
+    width: 100px;
+    height: 20px;
+}
+table{
+  margin-top: 1000px;
+}
